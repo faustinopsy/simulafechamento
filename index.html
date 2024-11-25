@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulador simples</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="tabs">
+        <div class="tab active" data-tab="simula">Simulação</div>
+        <div class="tab" data-tab="combina">Combinações</div>
+      </div>
+<div class="tab-content active" id="tab-simula">
+    <form id="form">
+        <div class="labels-interno">
+            <label for="quantidade">Quantidade dos sorteios</label>
+            <label for="acerto">Acerto Mínimo</label>
+        </div>
+        <div class="inputs-interno">
+            <input type="number" id="quantidade">
+            <input type="number" id="acerto">
+        </div>
+        <button type="submit"> Verificar </button>
+    </form>
     <div id="app"></div>
-    <script type="module" src="js/app.js"></script>
+</div>   
+<div class="tab-content" id="tab-combina">
+    <p>A combinação abaixo é composta por todos os 25 números distribuidos, garantindo assim 11 pontos em 99.95% dos jogos</p>
+    <pre id="combinacoes"></pre>
+</div>
+    <script type="module" src="js/app.js" defer></script>
 </body>
 </html>
